@@ -1,0 +1,129 @@
+.hero {
+  padding-left: 5rem;
+  padding-top: 4rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  .personal {
+    width: 60%;
+    flex-grow: 1;
+    .img {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      .image-title {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-left: 8px;
+        h2 {
+          color: var(--title);
+        }
+        .market {
+          color: var(--blue);
+          font-size: 20px;
+          align-self: flex-end;
+        }
+      }
+      img {
+        border: 1px solid darkolivegreen;
+        border-radius: 50%;
+        padding: 1px;
+        width: 5rem;
+        height: 5rem;
+        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.185);
+      }
+    }
+    .content {
+      margin-top: 16px;
+
+      .title {
+        color: var(--blue) !important;
+      }
+      .title,
+      .title-fixed {
+        color: var(--title);
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        text-transform: capitalize;
+      }
+
+      .about-me {
+        margin-top: 1rem;
+        color: var(--subtitle);
+        line-height: 2rem;
+      }
+    }
+    .media {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 16px;
+      .icon-media {
+        border-radius: 50%;
+        border: 1px solid rgba(250, 128, 114, 0.249);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          border: 1px solid salmon;
+        }
+        &:hover .icon {
+          color: var(--title);
+        }
+        &:active {
+          transform: scale(0.5);
+        }
+        .icon {
+          font-size: 1.5rem;
+          color: var(--subtitle);
+        }
+      }
+    }
+  }
+  .animate {
+    .contact-animation {
+      transform: translateX(60px);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    padding-left: 2rem;
+    .personal {
+      .content {
+        .title {
+          color: var(--title);
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          font-weight: 500;
+          letter-spacing: -0.025em;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding-left: 1rem;
+
+    .content {
+      .title {
+        color: var(--title);
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+      }
+    }
+    .animate {
+      display: none;
+    }
+  }
+}
